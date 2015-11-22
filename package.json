@@ -1,0 +1,23 @@
+{
+  "name": "tuneFeCodeChallenge",
+  "version": "1.0.0",
+  "description": "A code challenge for front end engineer applicants at Tune. Please visit our website at (http://www.tune.com/careers) for open positions.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/json-server/bin/index.js server_data/data_generator.js"
+  },
+  "keywords": [
+    "tune",
+    "challenge",
+    "jobs",
+    "career",
+    "frontend"
+  ],
+  "author": "Jack Morgan <jack@tune.com>",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^2.1.2",
+    "json-server": "^0.5.9"
+  }
+}
