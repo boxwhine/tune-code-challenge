@@ -741,7 +741,6 @@ input[type=number] {
 
 .pager ol {
     display: inline-block;
-    font-size: 0;
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
@@ -763,6 +762,11 @@ input[type=number] {
     font-weight: 600;
     padding: 5px;
     text-decoration: none;
+    cursor: pointer;
+}
+
+.pager a.disabled {
+    cursor: not-allowed;
 }
 
 .pager a.num {

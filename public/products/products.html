@@ -1,5 +1,5 @@
-<ol class="product-list">
-    <li class="product" ng-repeat="product in allProducts">
+<ol class="product-list" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <li class="product" ng-repeat="product in allProducts | pagination: currentPage * PAGE_SIZE | limitTo: PAGE_SIZE">
         <div class="product-viewport">
             <figure class="product-image">
                 <a ng-href="#/products/{{ product.id }}">
@@ -25,15 +25,17 @@
     </li>
 </ol>
 
-<!-- ...paging the data is optional. The markup for the pager is provided if you decide to implement that feature. -->
 <div class="pager">
     <ol>
-        <li><a href="">prev</a></li>
-        <li><a class="selected num" href="">1</a></li>
-        <li><a class="num" href="">2</a></li>
-        <li><a class="num" href="">3</a></li>
-        <li><a class="num" href="">4</a></li>
-        <li><a class="num" href="">5</a></li>
-        <li><a href="">next</a></li>
+        <li>
+            <a ng-class="{ disabled: currentPage === 0 }" ng-click="goToPrevPage()">prev</a>
+        </li>
+        <li>
+            <span class="num">Page {{currentPage + 1}} of {{ numberOfPages }}</span>
+        </li>
+        <li>
+            <a ng-class="{ disabled: currentPage >= allProducts.length / PAGE_SIZE - 1 }"
+               ng-click="goToNextPage()">next</a>
+        </li>
     </ol>
 </div>
