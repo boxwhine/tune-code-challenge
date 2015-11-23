@@ -18,9 +18,5 @@
             $scope.totalCartPrice = cartService.getTotalPriceOfCart();
             $rootScope.cartCount = cartService.getCartItemCount();
         }, true);
-
-        $scope.updateQuantity = function (product) {
-            var foo = '';
-        }
     }
 })();
