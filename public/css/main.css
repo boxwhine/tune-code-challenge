@@ -695,7 +695,6 @@ input[type=number] {
 
 .product-detail-main {
     border-bottom: 1px solid #ababab;
-    height: 41px;
     margin: 10px 10px 0;
 }
 
@@ -703,9 +702,14 @@ input[type=number] {
     color: #8aa880;
     display: inline-block;
     font-size: 16px;
+    line-height: 1.2;
     font-weight: 600;
     margin: 0;
     padding: 0;
+}
+
+.product-name a {
+    text-decoration: none;
 }
 
 .product-price {
@@ -715,12 +719,14 @@ input[type=number] {
 
 .product-details-extended {
     overflow: hidden;
-    padding: 0 10px;
+    padding: 5px 10px;
+    line-height: 1.2;
 }
 
 .product-button {
     position: absolute;
-    right: 10px;
+    bottom: 45px;
+    right: 5px;
 }
 
 .product-description {
@@ -779,6 +785,7 @@ input[type=number] {
 
 .product-detail {
     overflow: auto;
+    margin-bottom: 1rem;
 }
 
 .product-detail-image {

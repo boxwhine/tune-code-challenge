@@ -1,26 +1,22 @@
 <section class="product-detail-lead">
-    <h1>Product {{ productId }}</h1>
+    <header>
+        <h1>{{ product.name }}</h1>
+
+        <p>{{ product.shortDescription }}</p>
+    </header>
 
     <div class="product-detail">
         <figure class="product-detail-image">
-            <img src="http://lorempixel.com/350/400/city/"/>
+            <img src="{{ product.imageUrl }}"/>
         </figure>
         <div class="product-detail-buy">
-            <span class="price">$39.99</span>
+            <span class="price">{{ product.price }}</span>
             <button><i class="fa fa-plus"></i> Buy Now</button>
         </div>
     </div>
+
+    <section class="product-detail-description">
+        <p>{{ product.description }}</p>
+    </section>
 </section>
 
-<section class="product-detail-description">
-    <p>Malesuada lacus facilisis condimentum etiam nibh purus vivamus blandit leo nullam dolor pulvinar venenatis est
-        nec congue. Viverra cras potenti sodales at porta id adipiscing eget ullamcorper felis adipiscing lobortis at ac
-        in. Lorem parturient sem ad a mi inceptos a ante parturient a commodo aenean malesuada mi. Commodo condimentum
-        facilisi imperdiet dignissim phasellus mus vestibulum suspendisse nunc scelerisque porta condimentum suscipit a.
-        A a imperdiet scelerisque imperdiet sem fermentum varius cursus facilisis ante vestibulum venenatis habitant ad
-        cum parturient pretium.</p>
-
-    <p>Enim suscipit himenaeos vel felis vestibulum magnis scelerisque condimentum nunc nibh iaculis netus habitant orci
-        duis elit. Ut adipiscing lacinia elementum at rhoncus penatibus proin dictum augue hac scelerisque sociosqu ad
-        congue nibh ridiculus ultricies a.</p>
-</section>
