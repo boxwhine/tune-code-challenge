@@ -18,7 +18,7 @@
                         {{ product.quantity * product.price.replace('$','') | currency }}
                     </span>
                 </div>
-                <button class="cart-item-remove" ng-click="removeFromCart(product.id)">
+                <button class="cart-item-remove" ng-click="removeFromCart(product)">
                     <i class="fa fa-remove"></i> Remove From Cart
                 </button>
             </div>

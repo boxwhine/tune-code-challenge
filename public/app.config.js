@@ -5,9 +5,9 @@
         .module('tune-app')
         .config(config);
 
-    config.$inject = ['$routeProvider'];
+    config.$inject = ['$routeProvider', 'toastrConfig'];
 
-    function config($routeProvider) {
+    function config($routeProvider, toastrConfig) {
         $routeProvider
             .when('/', {
                 templateUrl: 'products/products.html',
@@ -31,5 +31,10 @@
             .otherwise({
                 redirectTo: '/404'
             });
+
+        angular.extend(toastrConfig, {
+            timeOut: 2000
+        });
     }
 })();
+

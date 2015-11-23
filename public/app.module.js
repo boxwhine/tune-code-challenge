@@ -4,7 +4,9 @@
     angular
         .module('tune-app', [
             'ngRoute',
-            'restangular'
+            'ngAnimate',
+            'restangular',
+            'toastr'
         ]);
 
 })();

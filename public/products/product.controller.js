@@ -5,9 +5,9 @@
         .module('tune-app')
         .controller('ProductCtrl', ProductCtrl);
 
-    ProductCtrl.$inject = ['$scope', '$rootScope', '$routeParams', 'productService', 'cartService', '$location'];
+    ProductCtrl.$inject = ['$scope', '$rootScope', '$routeParams', 'productService', 'cartService', '$location', 'toastr'];
 
-    function ProductCtrl($scope, $rootScope, $routeParams, productService, cartService, $location) {
+    function ProductCtrl($scope, $rootScope, $routeParams, productService, cartService, $location, toastr) {
 
         if($routeParams.id) {
             // Load up specific product for detail page
@@ -35,11 +35,7 @@
 
         $scope.addToCart = function (product) {
             cartService.addToCart(product);
-            $rootScope.cartCount = cartService.getCartItemCount();
-        };
-
-        $scope.removeFromCart = function (id) {
-            cartService.removeOneFromCart(id);
+            toastr.success('"' + product.name + '" has been added to your cart');
             $rootScope.cartCount = cartService.getCartItemCount();
         };
     }

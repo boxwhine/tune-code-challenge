@@ -5,13 +5,13 @@
         .module('tune-app')
         .controller('CartCtrl', CartCtrl);
 
-    CartCtrl.$inject = ['$scope', '$rootScope', 'cartService'];
+    CartCtrl.$inject = ['$scope', '$rootScope', 'cartService', 'toastr'];
 
-    function CartCtrl($scope, $rootScope, cartService) {
+    function CartCtrl($scope, $rootScope, cartService, toastr) {
         $scope.totalCartPrice = cartService.getTotalPriceOfCart();
 
-        $scope.removeFromCart = function (id) {
-            cartService.removeAllFromCart(id);
+        $scope.removeFromCart = function (product) {
+            cartService.removeAllFromCart(product.id);
         };
 
         $rootScope.$watch('cart', function (newVal, oldVal) {
