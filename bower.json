@@ -1,0 +1,30 @@
+{
+  "name": "tuneFeCodeChallenge",
+  "description": "A code challenge for front end engineer applicants at Tune. Please visit our website at (http://www.tune.com/careers) for open positions.",
+  "main": "server.js",
+  "authors": [
+    "Jack Morgan <jack@tune.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tune",
+    "challenge",
+    "jobs",
+    "career",
+    "frontend"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.8"
+  }
+}

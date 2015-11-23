@@ -1,205 +1,188 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Oleo+Script' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <div class="site-header-wrap">
-      <header class="site-header">
-        <h1 class="site-header-name">Code Challenge</h1>
-        <h2 class="site-header-byline">By Tune</h2>
-        <div class="cart-icon">
-          <i class="fa fa-shopping-cart"></i>
-          <span class="badge cart-badge ">5</span>
-        </div>
-      </header>
-    </div>
-    <div class="content-wrapper">
+<ol class="product-list">
 
-      <nav class="main-nav">
-        <ul>
-          <li><a href="">Products</a></li>
+    <!-- All of this should be dynamically populated by the API, paging the data is optional.
+         The markup for the pager is provided if you decide to implement that feature. -->
 
-          <!-- This badge should reflect how many items are currently in the cart -->
-          <li><a class="selected" href="">Cart <span class="badge nav-badge">5</span></a></li>
-        </ul>
-      </nav>
-      <main class="page-content">
-        <ol class="product-list">
-
-          <!-- All of this should be dynamically populated by the API, paging the data is optional.
-               The markup for the pager is provided if you decide to implement that feature. -->
-
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
                 <img src="http://lorempixel.com/200/260/city/1" alt=""/>
-              </figure>
-              <div class="product-details">
+            </figure>
+            <div class="product-details">
                 <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
                 </div>
                 <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
                 </div>
-              </div>
             </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/2" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/3" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/4" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/5" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/6" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/7" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/8" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="product-viewport">
-              <figure class="product-image">
-                <img src="http://lorempixel.com/200/260/city/9" alt=""/>
-              </figure>
-              <div class="product-details">
-                <div class="product-detail-main">
-                  <h2 class="product-name">Product Name</h2>
-                  <div class="product-price">$39.99</div>
-                </div>
-                <div class="product-details-extended">
-                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button class="product-button"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ol>
-        <div class="pager">
-          <ol>
-            <li><a href="">prev</a></li>
-            <li><a class="selected num" href="">1</a></li>
-            <li><a class="num"  href="">2</a></li>
-            <li><a class="num" href="">3</a></li>
-            <li><a class="num" href="">4</a></li>
-            <li><a class="num" href="">5</a></li>
-            <li><a href="">next</a></li>
-          </ol>
         </div>
-      </main>
-    </div>
-  </body>
-</html>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/2" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/3" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/4" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/5" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/6" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/7" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/8" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="product">
+        <div class="product-viewport">
+            <figure class="product-image">
+                <img src="http://lorempixel.com/200/260/city/9" alt=""/>
+            </figure>
+            <div class="product-details">
+                <div class="product-detail-main">
+                    <h2 class="product-name">Product Name</h2>
+
+                    <div class="product-price">$39.99</div>
+                </div>
+                <div class="product-details-extended">
+                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <button class="product-button"><i class="fa fa-shopping-cart"></i>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </li>
+</ol>
+<div class="pager">
+    <ol>
+        <li><a href="">prev</a></li>
+        <li><a class="selected num" href="">1</a></li>
+        <li><a class="num" href="">2</a></li>
+        <li><a class="num" href="">3</a></li>
+        <li><a class="num" href="">4</a></li>
+        <li><a class="num" href="">5</a></li>
+        <li><a href="">next</a></li>
+    </ol>
+</div>
