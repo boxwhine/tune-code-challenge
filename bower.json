@@ -25,6 +25,9 @@
     "tests"
   ],
   "devDependencies": {
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "restangular": "~1.5.1",
+    "angular-route": "~1.4.8",
+    "lodash": "~3.10.1"
   }
 }
