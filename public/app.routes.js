@@ -31,8 +31,8 @@
                     allProducts: function () {
                         return null;
                     },
-                    currentProduct: ['productService, $routeParams', function (productService, $routeParams) {
-                        return productService.getProductById($routeParams.id);
+                    currentProduct: ['productService', '$route', function (productService, $route) {
+                        return productService.getProductById($route.current.params.id);
                     }]
                 }
             })

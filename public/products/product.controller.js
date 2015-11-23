@@ -16,10 +16,12 @@
         $scope.goToPrevPage = goToPrevPage;
         $scope.product = currentProduct;
 
-        // pagination
-        $scope.currentPage = 0;
-        $scope.PAGE_SIZE = 12;
-        $scope.numberOfPages = Math.ceil($scope.allProducts.length / $scope.PAGE_SIZE);
+        // pagination, only if necessary
+        if(allProducts) {
+            $scope.currentPage = 0;
+            $scope.PAGE_SIZE = 12;
+            $scope.numberOfPages = Math.ceil($scope.allProducts.length / $scope.PAGE_SIZE);
+        }
 
         function addToCart(product) {
             cartService.addToCart(product);
