@@ -1,8 +1,11 @@
-<nav class="main-nav">
+<nav class="main-nav" ng-controller="NavCtrl">
+    {{ $location.path() }}
     <ul>
-        <li><a href="#/products">Products</a></li>
         <li>
-            <a href="#/cart" class="selected">Cart
+            <a ng-class="{ selected: isActive('/products')}" href="#/products">Products</a>
+        </li>
+        <li>
+            <a ng-class="{ selected: isActive('/cart')}" href="#/cart">Cart
                 <span class="badge nav-badge">{{ $root.cartCount }}</span>
             </a>
         </li>
