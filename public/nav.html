@@ -1,6 +1,10 @@
 <nav class="main-nav">
     <ul>
         <li><a href="#/products">Products</a></li>
-        <li><a href="#/cart" class="selected">Cart <span class="badge nav-badge">5</span></a></li>
+        <li>
+            <a href="#/cart" class="selected">Cart
+                <span class="badge nav-badge">{{ $root.cartCount }}</span>
+            </a>
+        </li>
     </ul>
 </nav>

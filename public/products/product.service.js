@@ -35,7 +35,7 @@
                 .catch(getProductByIdFailed);
 
             function getProductByIdComplete(response) {
-                return response;
+                return response.plain();
             }
 
             function getProductByIdFailed(error) {
@@ -51,7 +51,7 @@
                 .catch(getProductsFailed);
 
             function getProductsComplete(response) {
-                return response;
+                return response.plain();
             }
 
             function getProductsFailed(error) {

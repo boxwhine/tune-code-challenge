@@ -5,9 +5,22 @@
         .module('tune-app')
         .controller('CartCtrl', CartCtrl);
 
-    CartCtrl.$inject = ['$scope', '$location', '$http'];
+    CartCtrl.$inject = ['$scope', '$rootScope', 'cartService'];
 
-    function CartCtrl($scope, $location, $http) {
-        console.log('Cart Controller reporting for duty.');
+    function CartCtrl($scope, $rootScope, cartService) {
+        $scope.totalCartPrice = cartService.getTotalPriceOfCart();
+
+        $scope.removeFromCart = function (id) {
+            cartService.removeAllFromCart(id);
+        };
+
+        $rootScope.$watch('cart', function (newVal, oldVal) {
+            $scope.totalCartPrice = cartService.getTotalPriceOfCart();
+            $rootScope.cartCount = cartService.getCartItemCount();
+        }, true);
+
+        $scope.updateQuantity = function (product) {
+            var foo = '';
+        }
     }
 })();

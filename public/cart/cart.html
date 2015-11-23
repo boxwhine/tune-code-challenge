@@ -1,28 +1,33 @@
 <section class="cart-items">
     <ul>
-        <li class="cart-item">
+        <li class="cart-item" ng-repeat="product in $root.cart">
             <div>
                 <figure class="cart-item-image">
-                    <img src="http://lorempixel.com/100/100/city"/>
+                    <img src="{{ product.thumbnailUrl }}" alt="{{ product.name }}"/>
                 </figure>
-                <h2 class="cart-item-name">Product Name</h2>
+                <h2 class="cart-item-name">{{ product.name }}</h2>
 
-                <div class="cart-item-quantity-editor">
-                    Quantity:
-                    <input class="cart-item-quantity" type="number" value="1" min="1" step="1"/>
-                    <a class="cart-item-update" href="">Update</a>
+                <div class="cart-item-quantity-editor">Quantity:
+                    <input class="cart-item-quantity" type="number"
+                           ng-model="product.quantity"
+                           value="{{ product.quantity }}"
+                           min="1" step="1"/>
+                    <!--<a class="cart-item-update" href="#" ng-click="updateQuantity(product)">Update</a>-->
                 </div>
-                <div class="cart-item-total">
-                    Total:
-                    <span class="cart-item-total-price">$39.99</span>
+                <div class="cart-item-total">Total:
+                    <span class="cart-item-total-price">
+                        {{ product.quantity * product.price.replace('$','') | currency }}
+                    </span>
                 </div>
-                <button class="cart-item-remove"><i class="fa fa-remove"></i> Remove From Cart</button>
+                <button class="cart-item-remove" ng-click="removeFromCart(product.id)">
+                    <i class="fa fa-remove"></i> Remove From Cart
+                </button>
             </div>
         </li>
     </ul>
     <div class="cart-total">
         <div class="cart-total-detail">
-            Total of Items in Cart: <span class="cart-total-price">$39.99</span>
+            Total of Items in Cart: <span class="cart-total-price">{{ totalCartPrice | currency }}</span>
         </div>
     </div>
 </section>
