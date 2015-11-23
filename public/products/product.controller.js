@@ -3,13 +3,28 @@
 
     angular
         .module('tune-app')
-        .controller('ProductCtrl', function ($scope, $routeParams, Restangular) {
-            var msg = 'Product Controller reporting for duty.';
-            $scope.productId = $routeParams.id;
-            if ($routeParams.id) {
-                msg = 'You\'re looking at product number ' + $routeParams.id;
-            }
-            console.log(msg);
-        });
+        .controller('ProductCtrl', ProductCtrl);
 
+    ProductCtrl.$inject = ['$scope', '$routeParams', 'productService'];
+
+    function ProductCtrl($scope, $routeParams, productService) {
+
+        if($routeParams.id) {
+            // Load up specific product for detail page
+            productService.getProductById($routeParams.id)
+                .then(function(product) {
+                    $scope.product = product;
+                });
+        } else {
+            // Load up all products, unless already loaded
+            $scope.product = null;
+
+            if(!$scope.allProducts) {
+                productService.getProducts()
+                    .then(function(products) {
+                        $scope.allProducts = products;
+                    });
+            }
+        }
+    }
 })();
